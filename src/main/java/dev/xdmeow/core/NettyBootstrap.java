@@ -201,7 +201,7 @@ public class NettyBootstrap {
                 } catch (InterruptedException var2) {
                     throw new RuntimeException(var2);
                 }
-                System.out.println("Current connections: " + currentConnections + " | Total connections: " + totalConnections+" | Time left: "+(BanKai.duration-i));
+                System.out.println("Current CPS: " + currentConnections + " | Average CPS: " + Math.ceil((double)totalConnections / (double)totalSeconds) + " | Target CPS: " + triedCPS + " | Time Left: " + (BanKai.duration - i));
                 ++totalSeconds;
                 currentConnections = 0;
                 triedCPS = 0;
