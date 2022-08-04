@@ -5,7 +5,6 @@ import java.io.IOException;
 import dev.xdmeow.BanKai;
 import dev.xdmeow.core.NettyBootstrap;
 import dev.xdmeow.core.methods.IMethod;
-import dev.xdmeow.core.util.helper.RandomUtils;
 import dev.xdmeow.core.util.mcutil.ext.Handshake;
 import dev.xdmeow.core.util.proxy.Proxy;
 import io.netty.buffer.ByteBuf;
