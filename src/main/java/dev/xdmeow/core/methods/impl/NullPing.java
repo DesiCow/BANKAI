@@ -22,10 +22,11 @@ public class NullPing implements IMethod {
             try {
                 bbbb.write(15);
                 bbbb.write(0);
+                bbbb.write(47);
+                bbbb.write(911);
                 bbbb.write(99);
-                bbbb.write(453);
-                bbbb.write(457);
-                bbbb.write(1);
+                bbbb.write(200);
+                bbbb.write(10);
                 for (int i = 0; i < this.a; ++i) {
                     bbbb.write(1);
                     bbbb.write(0);

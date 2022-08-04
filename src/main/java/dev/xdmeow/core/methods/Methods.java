@@ -1,6 +1,8 @@
 package dev.xdmeow.core.methods;
 
+import dev.xdmeow.core.methods.impl.BigHandshake;
 import dev.xdmeow.core.methods.impl.BotJoiner;
+import dev.xdmeow.core.methods.impl.NullPing;
 
 import java.util.HashMap;
 
@@ -24,6 +26,8 @@ public class Methods {
 
     public static void setupMethods() {
         registerMethod("botjoiner", new BotJoiner());
+        registerMethod("nullping", new NullPing());
+        registerMethod("bighandshake", new BigHandshake());
     }
     public static IMethod getMethod(String methodID) {
         return (IMethod)METHODS.getOrDefault(methodID, new BotJoiner());
