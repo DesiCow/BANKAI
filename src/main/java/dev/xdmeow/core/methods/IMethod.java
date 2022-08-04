@@ -5,5 +5,4 @@ import io.netty.channel.Channel;
 import java.util.function.BiConsumer;
 
 public interface IMethod extends BiConsumer<Channel, Proxy> {
-
 }
