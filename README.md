@@ -1,7 +1,7 @@
 # BANKAI
 no base used made from scratch using netty
 follow up for XDDOS
-DISCORD : discord.io/XDDOS
+DISCORD : https://discord.io/XDDOS
 
 # Methods
 - MaxSizePacket
