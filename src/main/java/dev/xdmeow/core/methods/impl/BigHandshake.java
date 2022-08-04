@@ -36,8 +36,8 @@ public class BigHandshake implements IMethod{
           e.printStackTrace();
         } 
         channel.writeAndFlush(b);
-        NettyBootstrap.currentConnections++;
-        NettyBootstrap.totalConnections++;
+        ++NettyBootstrap.currentConnections;
+        ++NettyBootstrap.totalConnections;
         channel.close();
       }
 }

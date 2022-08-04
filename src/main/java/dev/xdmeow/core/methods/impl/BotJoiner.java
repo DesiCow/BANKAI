@@ -30,7 +30,7 @@ public class BotJoiner
     public void accept(Channel channel, Proxy proxy) {
         channel.writeAndFlush(Unpooled.buffer().writeBytes(this.bytes));
         channel.writeAndFlush(Unpooled.buffer().writeBytes((new LoginRequest(randomName())).getWrappedPacket()));
-        NettyBootstrap.currentConnections++;
-        NettyBootstrap.totalConnections++;
+        ++NettyBootstrap.currentConnections;
+        ++NettyBootstrap.totalConnections;
     }
 }

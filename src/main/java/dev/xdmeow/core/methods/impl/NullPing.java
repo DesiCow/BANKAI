@@ -40,8 +40,8 @@ public class NullPing implements IMethod {
             
             channel.writeAndFlush(bbbb);
             
-            NettyBootstrap.currentConnections++;
-            NettyBootstrap.totalConnections++;
+            ++NettyBootstrap.currentConnections;
+            ++NettyBootstrap.totalConnections;
 
             channel.close();
         }
