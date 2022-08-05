@@ -28,6 +28,7 @@ public class BanKai {
 
     public static File proxyFile;
     public static String Discord = "CatOnDrugs#1521";
+    public static Object protcolID;
 
     public static void main(String[] args) {
 
