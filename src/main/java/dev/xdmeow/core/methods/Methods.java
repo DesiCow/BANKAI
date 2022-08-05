@@ -2,6 +2,7 @@ package dev.xdmeow.core.methods;
 
 import dev.xdmeow.core.methods.impl.BigHandshake;
 import dev.xdmeow.core.methods.impl.BotJoiner;
+import dev.xdmeow.core.methods.impl.LocalHost;
 import dev.xdmeow.core.methods.impl.LongName;
 import dev.xdmeow.core.methods.impl.MaxsizePacket;
 import dev.xdmeow.core.methods.impl.NullPing;
@@ -39,6 +40,7 @@ public class Methods {
         registerMethod("ramfucker", new RamFucker());
         registerMethod("maxsizepacket", new MaxsizePacket());
         registerMethod("longname", new LongName());
+        registerMethod("localhost", new LocalHost());
     }
     
     public static IMethod getMethod(String methodID) {
