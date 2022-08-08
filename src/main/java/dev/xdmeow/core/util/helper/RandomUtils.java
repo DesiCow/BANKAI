@@ -4,7 +4,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Random;
 
 public final class RandomUtils {
-    public static String randomUTF16String1(int length) {
+    public static String randomUTF16String(int length) {
         Random rnd = new Random();
         StringBuilder s = new StringBuilder();
         for (int i = 0; i < length; i++)

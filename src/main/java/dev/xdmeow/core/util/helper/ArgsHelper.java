@@ -1,7 +1,6 @@
 package dev.xdmeow.core.util.helper;
 
 import dev.xdmeow.BanKai;
-import dev.xdmeow.core.methods.Methods;
 
 import java.util.Scanner;
 
