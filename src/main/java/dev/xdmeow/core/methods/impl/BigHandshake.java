@@ -15,9 +15,7 @@ public class BigHandshake implements IMethod{
     private int size = 1024;
 
     public BigHandshake() {
-        for (int i = 1; i < this.size; i++) {
-            this.xd += String.valueOf(this.xd);
-        }
+            this.xd = this.xd.repeat(this.size); 
       }
 
       public void accept(Channel channel, Proxy proxy) {
