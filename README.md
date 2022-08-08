@@ -11,3 +11,4 @@ DISCORD : https://discord.io/XDDOS
 - LongName
 - RamFucker
 - NullPing
+- LocalHost
