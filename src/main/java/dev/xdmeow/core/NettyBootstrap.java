@@ -52,7 +52,7 @@ public class NettyBootstrap {
                 loopGroup = new EpollEventLoopGroup(nettyThreads, r -> {
                     Thread t = new Thread(r);
                     t.setDaemon(true);
-                    t.setPriority(10);
+                    t.setPriority(5);
                     return t;
                 });
             }
